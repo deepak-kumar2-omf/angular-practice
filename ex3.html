@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Button and Event Example</title>
+    <style>
+        #content {
+            margin-top: 20px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <button id="changeTextButton">Change Text</button>
+    <button id="changeBgButton">Change Background Color</button>
+    <button id="changeTextColorButton">Change Text Color</button>
+
+    <p id="content">This is the original text.</p>
+
+    <script>
+        // Event listener for the 'Change Text' button
+        document.getElementById("changeTextButton").addEventListener("click", function() {
+            document.getElementById("content").textContent = "The text has been changed!";
+        });
+
+        // Event listener for the 'Change Background Color' button
+        let colorIndex = 0;
+        const colors = ["lightblue", "lightgreen", "lightyellow", "lightcoral"];
+        document.getElementById("changeBgButton").addEventListener("click", function() {
+            document.body.style.backgroundColor = colors[colorIndex];
+            colorIndex = (colorIndex + 1) % colors.length;
+        });
+
+        // Event listener for the 'Change Text Color' button
+        document.getElementById("changeTextColorButton").addEventListener("click", function() {
+            document.getElementById("content").style.color = "green";
+        });
+    </script>
+
+</body>
+</html>
