@@ -1,16 +1,23 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { Test1Component } from '../app/components/test1.component';
+//import { RouterOutlet } from '@angular/router';
+//import { EmployeeComponent } from './employee/employee.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  //imports: [RouterOutlet],
   template:   `
-                <h1>{{ title }}</h1>  
-                <my-employee></my-employee> 
-                `
- // styleUrl: './app.component.scss'
+              <div>
+                <h1>{{title ? title : 'No title' }}</h1>  
+                </div>
+
+                `,
+styleUrls:  ['./app.component.scss']
+
+ 
+  
+ 
 })
 export class AppComponent {
-  title = 'Employee Details';
+  title =  null; //'Employee Details';
 }
+// <my-employee></my-employee> 
