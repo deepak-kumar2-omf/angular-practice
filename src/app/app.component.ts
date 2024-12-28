@@ -7,13 +7,7 @@ import { EmployeeComponent } from './employee/employee.component';
   selector: 'app-root',
   //imports: [RouterOutlet],
   imports:  [EmployeeComponent],
-  template:   `
-              <div>
-                <h1>{{title ? title : 'No title' }}</h1>  
-                <my-employee></my-employee> 
-                </div>
-                 
-                `,
+  templateUrl: './app.component.html',
 styleUrls:  ['./app.component.scss']
 
  
@@ -21,6 +15,6 @@ styleUrls:  ['./app.component.scss']
  
 })
 export class AppComponent {
-  title =  null; //'Employee Details';
+  title = 'Employee Details';
 }
 // <my-employee></my-employee> 
