@@ -1,0 +1,18 @@
+<table>
+    <thead>
+        <tr>
+                <th>Code</th>
+                <th>Name</th>
+                <th>Gender</th>
+                <th>Salary</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let emplyee of employees">
+            <td>{{ employee.code }}</td>
+            <td>{{ employee.name }}</td>
+            <td>{{ employee.gender }}</td> 
+            <td>{{ employee.salary }}</td>
+        </tr>
+    </tbody>
+</table>

@@ -1,1 +1,27 @@
-<p>Employee: {{ firstName }}</p>  
+<table>
+  <thead>
+    <tr>
+      <th [attr.colspan]= "columnSpan">
+         Employee Details
+      </th>
+    </tr>
+  </thead>
+    <tr>
+      <td><strong>First Name</strong></td>
+      <td>{{ firstName }}</td>  <!-- Angular interpolation to display firstName -->
+    </tr>
+    <tr>
+      <td><strong>Last Name</strong></td>
+      <td>{{ lastName }}</td>  <!-- Angular interpolation to display lastName -->
+    </tr>
+    <tr *ngIf = 'showDetails'>
+      <td><strong>Gender</strong></td>
+      <td>{{ gender }}</td>  <!-- Angular interpolation to display gender-->
+    </tr>
+    <tr *ngIf = 'showDetails'>
+      <td><strong>Age</strong></td>
+      <td>{{ age }}</td>  <!-- Angular interpolation to display age-->
+    </tr>
+  </table>
+  <br />
+  <button (click) = "toggleDetails()"> {{ showDetails ? 'Hide' : 'Show'}} Details </button>
