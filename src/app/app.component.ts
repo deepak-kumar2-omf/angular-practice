@@ -1,9 +1,14 @@
 import { Component } from '@angular/core';
+import { EmployeeListComponent } from './employee/employeeList.component';
+import { EmployeeCountComponent } from './employee/employeeCount.component';
 import { RouterOutlet } from '@angular/router';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+ // imports: [RouterOutlet],
+    imports:  [ CommonModule, FormsModule, EmployeeListComponent, EmployeeCountComponent ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
